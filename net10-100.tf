@@ -8,7 +8,7 @@ resource "google_compute_network" "net10-100" {
 resource "google_compute_subnetwork" "subnet200-23" {
   name          = "subnet200-23"
   ip_cidr_range = "10.100.200.0/23"
-  network       = google_compute_network.net200-23.id
+  network       = google_compute_network.net10-100.id
   region        = var.region
   project       = var.project
 }
